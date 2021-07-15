@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#1fe6f6">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="theme-color" content="#242424"> -->
+    <title>Document</title>
+    <!-- <script src="./assets/map/vendor/jquery/jquery-3.2.1.min.js" ></script>  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="./presentation/hologram.css">
+    <!--===============================================================================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> 
+    <!--===============================================================================================-->   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
+    <!--===============================================================================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous"></script>
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./assets/map/css/main.css">
+    <!--===============================================================================================-->
+    <style>
+
+    .loading-content{
+        width: 100%;
+        height: 90vh;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+
+    }
+
+
+
+
+        @keyframes anim{
+	to{
+		stroke-dashoffset:0;
+		opacity: 0;
+	}
+
+        }
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="loading-wrapper" style="
+    position:absolute; 
+    top:0; 
+    left: 0; 
+    width:100vw; 
+    height: 1000vh;;
+    background-color: #303030; 
+    z-index: 999;">
+
+
+<div class="loading-content">
+
+    <h1 style="text-align: center; 
+        
+        font-size: 3rem;
+    ">Welcome To My Portfolio</h1>
+
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"
+    style="
+    height: 500px;
+	width: 600px;
+    filter: drop-shadow(7px 10px 6px #1fe6f6) !important;
+	filter:drop-shadow(0 0 25px #00e6a8);
+    transform: translateY(-20vh);
+    "
+    >
+		<g class="pathdraw" id="Layer_1"
+        style="
+        stroke: white;
+        fill: transparent;
+        stroke-width:6px;
+        animation: anim 1.5s linear infinite;
+        stroke-dasharray: 2000;
+        stroke-dashoffset:2000;
+        "
+        >
+			<title>Pulse Heart</title>
+			<path id="svg_1" d="m67.5,299.2l142.5,-0.2l8,-23l11,23l34,0l14,-109l14,226l12,-118l30,0l5,-15l10,0l7,-16l10,31l155,0" />
+		</g>
+	</svg>
+
+    <h1 id="just" style="text-align: center; 
+        width: 50%;
+        font-size: 3rem;
+    ">Just A Sec...</h1>
+
+</div>
+
+
+</div>
+
+
+    </div>
+    
+    
+</div> -->
+
+    <!--The Filter for Lighting strike-->
+    <svg>
+        <filter id="wavy"> 
+            <feTurbulence x="0" y="0" baseFrequency="0.05" numOctaves="1" seed="1">
+                <animate attributeName="numOctaves" dur="1s"
+                values="1 ;  4 ; 6 ; 8 ; 10 ; 6 ; 3 ;1"
+                    keyTimes="0 ; 0.3 ; 0.4 ; 0.5 ; 0.6; 0.7;  0.9; 1"
+                    repeatCount="indefinite"
+                    ></animate>
+                    -
+           
+                <animate attributeName="baseFrequency" dur="1s"
+                values="0.03; 0.03; 0.026 ; 0.03; 0.03"
+                keyTimes="0 ; 0.2 ; 0.5 ; 0.7 ; 1"
+                repeatCount="indefinite"
+                ></animate>-->
+                <animate attributeName="seed" dur="1s"
+                values="1 ; 2 ; 4 ; 6 ; 8 ; 10 ; 8 ; 6 ; 3 ;1"
+                keyTimes="0 ; 0.2; 0.3 ; 0.4 ; 0.5 ; 0.6; 0.7; 0.8 ; 0.9; 1"
+                repeatCount="indefinite"
+                ></animate>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+        </filter>
+
+    </svg>
+    
+    <svg>
+        <filter id="wavy2"> 
+            <feTurbulence x="0" y="0" baseFrequency="0.05" numOctaves="1" seed="1">
+                <animate attributeName="numOctaves" dur="1.5s"
+                values="1 ;  4 ; 6 ; 8 ; 10 ; 6 ; 3 ;1"
+                    keyTimes="0 ; 0.3 ; 0.4 ; 0.5 ; 0.6; 0.7;  0.9; 1"
+                    repeatCount="indefinite"
+                    ></animate>
+                    -
+                
+                    <animate attributeName="baseFrequency" dur="1.5s"
+                    values="0.03; 0.03; 0.026 ; 0.03; 0.03"
+                    keyTimes="0 ; 0.2 ; 0.5 ; 0.7 ; 1"
+                    repeatCount="indefinite"
+                    ></animate>-->
+                    <animate attributeName="seed" dur="1.5s"
+                    values="1 ; 2 ; 4 ; 6 ; 8 ; 10 ; 8 ; 6 ; 3 ;1"
+                    keyTimes="0 ; 0.2; 0.3 ; 0.4 ; 0.5 ; 0.6; 0.7; 0.8 ; 0.9; 1"
+                    repeatCount="indefinite"
+                    ></animate>
+            </feTurbulence>
+              <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+        </filter>
+
+    </svg>
+    <a class="navigator" id="top"></a>
+
+    <div class="navigation-bar">
+
+        
+        <div class="nav-item active" id='nav-top-item'><a href="#top" class="works"><div>Top</div></a></div>
+        <div class="nav-item" id='nav-skills-navigator-item' ><a href="#skills-navigator" class="works"><div>Skills</div></a></div>
+        <div class="nav-item" id='nav-works-item'><a href="#works" class="works"><div>Works</div></a></div>
+        <div class="nav-item" id='nav-contact-item'><a href="#contact" class="works"><div>Contact</div></a></div>
+        <div class="nav-item" id='nav-aboutMe-item'><a href="#aboutMe" class="works"><div>About Me</div></a></div>
+    </div>
+    <div class="every">
+       
+        <div class="top-hero-content">
+
+            <div class="top-hero-text-container">
+                <div class = 'hero-text-box' id="first-line">
+                <h1 class="title-first-h1">H<span class="f-blink">I</span> </h1>
+                <span class="hero-sub-title highlight">The<span class="s-blink">r</span>e</span>
+                   
+            </div>
+
+
+                <div class = 'hero-text-box' id="second-line">
+                    <h1 class="title-first-h1">W<span class="s-blink">e</span>lcome </h1>
+                    <span class="hero-sub-title highlight">To My</span>                
+                </div>
+
+
+                <div class = 'hero-text-box' id="third-line">
+                    <h1 class="title-first-h1"><span class="t-blink">W</span>orld </h1>
+                    <span class="hero-sub-title highlight">St<span class="f-blink">a</span>rt Exp<span class="t-blink">l</span>oring...</span>
+                </div>
+            </div>
+            <div class="scroll-determiner">
+                <div class="scroll-fly"><span class="scroll-text">Scroll Down ></span></div>
+                <div class="scroll-fly"><span class="scroll-text">Scroll Down ></span></div>
+            </div>
+        </div>
+<div class="top-hero">
+    <img src="./assets/images/cty-view.jpg" alt="">
+    
+</div>
+        
+        
+        
+        <div class="alien">
+            <a class="navigator top-anchor" id="top"></a>
+       
+
+
+
+
+
+            <div class="created-title" id="top-title">
+                <h1 class="title-first-h1">B<span class="t-blink">y</span></h1>
+                <img class='bolt' src="./Images/lightning-svgrepo-com.svg" alt="thunder">
+                <h1 class="title-second-h1">Co<span class="f-blink">m</span>bi<span class="s-blink">n</span>ing</h1>
+            </div>
+            <div class="spacer"></div>
+        <div class="robotan">
+        <div class="hero">
+            <div class="sub-loading"><h1>Loading...</h1></div>
+        </div>
+    </div>
+       
+        
+    
+        
+        <div class="technology" id="powerUnit">
+            
+    
+            <div class="skill" id="turbine"></div>
+            <div class="skill" id="battery"></div>
+            <div class="line">
+                <div class="line2"></div>
+             
+            </div>
+            <div class="secline">
+                <div class="line2"></div>
+             
+            </div>
+        
+            
+            
+        </div>
+
+        <a  class="navigator" id="skills-navigator">&lt;Skills&gt;</a>
+
+
+
+
+        <div class="created-title" id="skills-title">
+            <h1 class="title-first-h1">An<span class="t-blink">d</span></h1>
+            <img class='bolt' src="./Images/lightning-svgrepo-com.svg" alt="thunder">
+            <h1 class="title-second-h1">Te<span class="f-blink">ch</span>no<span class="s-blink">lo</span>gies Like</h1>
+        
+        </div>
+
+        
+        <div class="technology" id="technologies">
+            
+    
+            <div class="skill max-height" id="html"><h3>H<span>T</span>ML</h3></div>
+            <div class="skill max-height" id="css"><h3>CS<span>S</S></span></h3></div>
+            <div class="skill max-height" id="js"><h3>JavaSc<span>r</span>ipt</h3></div>
+            
+            
+        </div>
+        <div class="technology" id='react-container'>
+            
+    
+    
+            <div class="skill max-height" id="react"><h3>Rea<span>c</span>t</h3></div>
+            
+            
+        </div>
+
+        
+        
+      
+            
+    
+           
+            
+        </div> <!-- Alien Closing tag -->
+    
+    
+        <div class="alien" id="second-alien">
+
+            <a class="navigator" id="works">&lt;Works&gt;</a>
+
+            
+        <div class="matrix-container">
+		
+            <div class="matrix-inner-container">
+                <canvas id="c"></canvas>
+                <img src="" data-src='./assets/images/sscreen-transparented-background-colored.png' alt="matrix-rain" srcset="" class="monitor">
+            </div>
+            
+            
+        </div>
+
+
+
+
+
+            <div class="created-title" id="works-title">
+                <h1 class="title-first-h1">I<span class="t-blink"></span></h1>
+                <img class='bolt' src="./Images/lightning-svgrepo-com.svg" alt="thunder">
+                <h1 class="title-second-h1">Cre<span class="f-blink">a</span>t<span class="s-blink">e</span>d :</h1>
+            </div>
+
+            
+
+        <div class="works">
+            <!-- <div class="skill">Project 1 </div> -->
+                    
+        <div class="parent">
+            <h2 class="neon-h3-flicker work-title"><span class="highlight">#1</span>      Filmedia</h2>
+            <div class="child" id="first-presentation-child">
+            <div class="glitch-container">
+                <div class="glitch">
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <!-- <h1 class="glitch__title">Glitch</h1> -->
+                </div>
+            </div>
+            </div>
+            <div class="child duble-grow" id="second-presentation-child">
+               
+                <div class="description">
+                    <h3 class="neon-h3-flicker">Overview</h3>
+                    <p>A half <strong class="highlight">React</strong>, Half Pure JavaScript , <strong class="highlight">Parallax</strong> ,Glassmorphism, <strong class="highlight">Neon </strong> Designed <strong class="highlight">Movie Platform</strong>, With A From Scratch Created <strong class="highlight">AJAX</strong> Search Bar, That <strong class="highlight">Fethes</strong> All Sorts of Information About Movies From A <strong class="highlight">Third Party API</strong> And Shows The Result Based On The Provided Filters</p>
+                    <h3 class="neon-h3-flicker">Created Using:</h3>
+                    <p class="toolls">React <strong class="highlight">|</strong> Restfull API <strong class="highlight">|</strong>AJAX<strong class="highlight">|</strong> JQuery <strong class="highlight">|</strong> HTML <strong class="highlight">|</strong> CSS <strong class="highlight">|</strong> JavaScript <strong class="highlight">|</strong></p>
+                </div>
+                
+          
+            </div>
+        </div>
+        <div class="spacer"></div>
+                   
+        <div class="parent row-reverse">
+            <h2 class="neon-h3-flicker work-title"><span class="highlight">#1</span>      Filmedia</h2>
+            <div class="child" id="first-presentation-child">
+            <div class="glitch-container">
+                <div class="glitch">
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <!-- <h1 class="glitch__title">Glitch</h1> -->
+                </div>
+            </div>
+            </div>
+            <div class="child duble-grow" id="second-presentation-child">
+               
+                <div class="description">
+                    <h3 class="neon-h3-flicker">Overview</h3>
+                    <p>A half <strong class="highlight">React</strong>, Half Pure JavaScript , <strong class="highlight">Parallax</strong> ,Glassmorphism, <strong class="highlight">Neon </strong> Designed <strong class="highlight">Movie Platform</strong>, With A From Scratch Created <strong class="highlight">AJAX</strong> Search Bar, That <strong class="highlight">Fethes</strong> All Sorts of Information About Movies From A <strong class="highlight">Third Party API</strong> And Shows The Result Based On The Provided Filters</p>
+                    <h3 class="neon-h3-flicker">Created Using:</h3>
+                    <p class="toolls">React <strong class="highlight">|</strong> Restfull API <strong class="highlight">|</strong>AJAX<strong class="highlight">|</strong> JQuery <strong class="highlight">|</strong> HTML <strong class="highlight">|</strong> CSS <strong class="highlight">|</strong> JavaScript <strong class="highlight">|</strong></p>
+                </div>
+                
+          
+            </div>
+        </div>
+        <div class="spacer"></div>
+                  
+        <div class="parent">
+            <h2 class="neon-h3-flicker work-title"><span class="highlight">#1</span>      Filmedia</h2>
+            <div class="child" id="first-presentation-child">
+            <div class="glitch-container">
+                <div class="glitch">
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <!-- <h1 class="glitch__title">Glitch</h1> -->
+                </div>
+            </div>
+            </div>
+            <div class="child duble-grow" id="second-presentation-child">
+               
+                <div class="description">
+                    <h3 class="neon-h3-flicker">Overview</h3>
+                    <p>A half <strong class="highlight">React</strong>, Half Pure JavaScript , <strong class="highlight">Parallax</strong> ,Glassmorphism, <strong class="highlight">Neon </strong> Designed <strong class="highlight">Movie Platform</strong>, With A From Scratch Created <strong class="highlight">AJAX</strong> Search Bar, That <strong class="highlight">Fethes</strong> All Sorts of Information About Movies From A <strong class="highlight">Third Party API</strong> And Shows The Result Based On The Provided Filters</p>
+                    <h3 class="neon-h3-flicker">Created Using:</h3>
+                    <p class="toolls">React <strong class="highlight">|</strong> Restfull API <strong class="highlight">|</strong>AJAX<strong class="highlight">|</strong> JQuery <strong class="highlight">|</strong> HTML <strong class="highlight">|</strong> CSS <strong class="highlight">|</strong> JavaScript <strong class="highlight">|</strong></p>
+                </div>
+                
+          
+            </div>
+        </div>
+        <div class="spacer"></div>
+                   
+        <div class="parent">
+            <h2 class="neon-h3-flicker work-title"><span class="highlight">#1</span>      Filmedia</h2>
+            <div class="child" id="first-presentation-child">
+            <div class="glitch-container">
+                <div class="glitch">
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <div class="glitch__item"></div>
+                <!-- <h1 class="glitch__title">Glitch</h1> -->
+                </div>
+            </div>
+            </div>
+            <div class="child duble-grow" id="second-presentation-child">
+               
+                <div class="description">
+                    <h3 class="neon-h3-flicker">Overview</h3>
+                    <p>A half <strong class="highlight">React</strong>, Half Pure JavaScript , <strong class="highlight">Parallax</strong> ,Glassmorphism, <strong class="highlight">Neon </strong> Designed <strong class="highlight">Movie Platform</strong>, With A From Scratch Created <strong class="highlight">AJAX</strong> Search Bar, That <strong class="highlight">Fethes</strong> All Sorts of Information About Movies From A <strong class="highlight">Third Party API</strong> And Shows The Result Based On The Provided Filters</p>
+                    <h3 class="neon-h3-flicker">Created Using:</h3>
+                    <p class="toolls">React <strong class="highlight">|</strong> Restfull API <strong class="highlight">|</strong>AJAX<strong class="highlight">|</strong> JQuery <strong class="highlight">|</strong> HTML <strong class="highlight">|</strong> CSS <strong class="highlight">|</strong> JavaScript <strong class="highlight">|</strong></p>
+                </div>
+                
+          
+            </div>
+        </div>
+        <div class="spacer"></div>
+       
+       
+           
+       </div>
+       <a class="navigator" id="contact">&lt;Contact&gt;</a>
+        <div class="contact-form">
+            
+	<div class="container-contact100">
+		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="./assets/map/images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+
+
+
+
+
+
+ <div class="box">
+        <h2>Let's Talk </h2>
+        <form action="">
+            <div>
+                <input type="text" name="" required=''>
+                <label for="">Name</label>
+            </div>
+            <div>
+                <input type="email" name="" required=''>
+                <label for="">Email</label>
+            </div>
+            <div>
+                <input type="text" name="" required='' id="subject">
+                <label for="">Subject</label>
+            </div>
+            <div>
+                <textarea name="" id="" cols="30" rows="10" required='' id="message"></textarea>
+                <label for="">Message</label>
+            </div>
+            <input type="submit" name="" value="Submit" id="submit">
+        </form>
+    </div>
+
+
+
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+        </div>
+
+        <a class="navigator" id="aboutMe">&lt;about me&gt;</a>
+        <div class="aboutMe"></div>
+        </div><!--second alien closing tag-->
+
+
+</div>
+
+
+
+
+
+
+
+         
+      
+      <!-- Three.js -->
+      <script src='https://unpkg.com/three@0.83.0'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/EffectComposer.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/RenderPass.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/ShaderPass.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/HorizontalBlurShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/VerticalBlurShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/FilmShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
+      <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
+      <script src="./presentation/presentation.js" ></script>
+     
+
+    <!--===============================================================================================-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+        <script src="./assets/map/js/map-custom.js"></script>
+    <!--===============================================================================================-->
+        
+    
+    
+
+        <script>
+             let loadingWrapper = document.querySelector('.loading-wrapper')
+
+
+ 
+            setTimeout(()=>{
+                    const just = document.querySelector('#just')
+                    console.log('this is just', just)
+                    if(just){
+                        
+                        just.innerHTML = 'Thanks For Your Patience :)'
+                    }
+                },3000)
+                setTimeout(()=>{
+                   const just =  document.querySelector('#just')
+                   if(just){
+                       just.innerHTML = 'Just A Little Bit... :)'
+                   }
+                },9000)
+               
+            
+                
+
+
+
+
+
+
+
+
+var c = document.getElementById("c");
+    var ctx = c.getContext("2d");
+    
+    
+    
+    
+   
+    window.onload = ()=>{
+    
+    
+     
+    loadingWrapper.parentElement.removeChild(loadingWrapper)
+    
+    document.querySelector('.every').classList.add('fade-in');
+    
+   
+    }
+    
+    
+    
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+  
+    
+</html>
