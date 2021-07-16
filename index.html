@@ -203,7 +203,7 @@
             </div>
         </div>
 <div class="top-hero">
-    <img src="./assets/images/cty-view.jpg" alt="">
+    <img src="./assets/images/cty-view.jpg" alt="" class="top-hero-image">
     
 </div>
         
@@ -555,19 +555,16 @@ var c = document.getElementById("c");
     
     
     
-    
-   
-    window.onload = ()=>{
-    
-    
-     
-    loadingWrapper.parentElement.removeChild(loadingWrapper)
-    
-    document.querySelector('.every').classList.add('fade-in');
-    
-   
-    }
-    
+        let topHero = document.querySelector('.top-hero-image')
+        topHero.onload = ()=>{
+            console.log('the top hero is loaded')
+            
+            
+            loadingWrapper.parentElement.removeChild(loadingWrapper)
+            
+            document.querySelector('.every').classList.add('fade-in');
+        }
+       
     
     
         </script>
