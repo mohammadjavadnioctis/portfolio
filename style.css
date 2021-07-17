@@ -10,6 +10,7 @@ body{
     display: flex;
     justify-content: center;
     font-family: 'Share Tech Mono', monospace;
+    overflow-x: hidden;
     
 }
 
