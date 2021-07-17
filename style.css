@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     font-family: 'Share Tech Mono', monospace;
-    overflow-x: hidden;
+    
     
 }
 
@@ -22,6 +22,9 @@ body{
     place-items: center;
 }
 
+.every{
+    width: 100%;
+}
 .fade-in {
   animation: fadeIn 0.9s;
 }
