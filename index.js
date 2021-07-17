@@ -90,7 +90,7 @@ ScrollTrigger.create({
   // markers: true,
   
   onEnter:() => {
-    
+    if (!isMobile){
 
     if(robotIsLoaded == true){
       robot.play()
@@ -116,7 +116,7 @@ ScrollTrigger.create({
 
     }
    
-
+  }
 
 
   },
@@ -279,35 +279,42 @@ const batteryCheckClearInterval = function () {
 
 
 
-
-
-const svgInfoTaker = () => {
+let svgInfoTaker = ()=>{}
+if(!isMobile){
+ svgInfoTaker = () => {
 svgTag = document.querySelector("#battery").firstElementChild;
 
 // console.log("battery tag's child element count",batteryDiv.childElementCount)
 // console.log(svgTag)
 let BatteryDivHeight = getComputedStyle(batteryDiv)
 let svgHeight = getComputedStyle(svgTag).height;
+
 svgHeightUpdater()
 
 
 
 
 }
-
+}
 
 
 const secondAlienDiv = document.querySelector('#second-alien') 
 let calculatedTopForThunder;
 let thunderHeight ;
 let executed = false;
-const svgHeightUpdater = () => setInterval(() => {
+let alienDivHeight;
+let alienDivWidth;
+let parsedBatteryDivHeight;
+let parsedBatteryDivMargin;
+let svgHeightUpdater=()=>{}
+if (!isMobile){
+  svgHeightUpdater = () => setInterval(() => {
   BatteryDivHeight = getComputedStyle(batteryDiv).height
   BatteryDivMargin = getComputedStyle(batteryDiv).marginTop
-  let alienDivHeight = getComputedStyle(alienDiv).height 
-  let alienDivWidth = getComputedStyle(alienDiv).width 
-  let parsedBatteryDivHeight = parseFloat(BatteryDivHeight)
-  let parsedBatteryDivMargin = parseFloat(BatteryDivMargin)
+  alienDivHeight = getComputedStyle(alienDiv).height 
+  alienDivWidth = getComputedStyle(alienDiv).width 
+  parsedBatteryDivHeight = parseFloat(BatteryDivHeight)
+  parsedBatteryDivMargin = parseFloat(BatteryDivMargin)
 
   calculatedTopForThunder = (parsedBatteryDivHeight + parsedBatteryDivMargin) - 10;
 
@@ -325,6 +332,7 @@ const svgHeightUpdater = () => setInterval(() => {
     
 
     if(horizontalThunder.style.width !== '100vw' && executed == false){
+     console.log('horizontal expalndder is executed')
     executed = true;
     setTimeout( () => {
       horizontalThunder.style.width = 100 + 'vw' 
@@ -333,7 +341,10 @@ const svgHeightUpdater = () => setInterval(() => {
       sideThunderExpander()
     }, 3000)}
   }
-}, 300)
+}, 2000)
+
+}
+
 
 let heightInterval2;
 
@@ -377,7 +388,7 @@ powerUnit.appendChild(horizontalThunder)
 let sideThunder1 = horizontalThunder.cloneNode(true)
 sideThunder1.id = 'sideThunder';
 const alienDiv = document.querySelector('.alien')
-let alienDivHeight = getComputedStyle(alienDiv).height
+// let alienDivHeight = getComputedStyle(alienDiv).height
 
 sideThunder1.style.right = 0;
 sideThunder1.style.left = 0;
