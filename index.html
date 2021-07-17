@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="theme-color" content="#242424"> -->
-    <title>Document</title>
+    <title> M.J's Portfolio </title>
     <!-- <script src="./assets/map/vendor/jquery/jquery-3.2.1.min.js" ></script>  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -203,7 +203,14 @@
             </div>
         </div>
 <div class="top-hero">
-    <img src="./assets/images/cty-view.jpg" alt="" class="top-hero-image">
+    <img src="./assets/images/cty-view.jpg" alt="" class="top-hero-image" onload="console.log('the top hero is loaded')
+        
+            
+        let loadingWrapper = document.querySelector('.loading-wrapper')
+	console.log('this is loading wrappper:' , loading wrapper)
+    loadingWrapper.parentElement.removeChild(loadingWrapper)
+    
+    document.querySelector('.every').classList.add('fade-in');">
     
 </div>
         
@@ -494,36 +501,23 @@
 
 
 
-         
-      
-      <!-- Three.js -->
-      <script src='https://unpkg.com/three@0.83.0'></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/EffectComposer.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/RenderPass.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/ShaderPass.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/HorizontalBlurShader.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/VerticalBlurShader.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/FilmShader.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
-      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
-      <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
-      <script src="./presentation/presentation.js" ></script>
-     
-
-    <!--===============================================================================================-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-        <script src="./assets/map/js/map-custom.js"></script>
-    <!--===============================================================================================-->
-        
     
     
 
         <script>
-             let loadingWrapper = document.querySelector('.loading-wrapper')
+            //  let loadingWrapper = document.querySelector('.loading-wrapper')
 
-
+            
+        // let topHero = document.querySelector('.top-hero-image').onload = function (){
+        //     console.log('the top hero is loaded')
+        
+            
+            
+        //     loadingWrapper.parentElement.removeChild(loadingWrapper)
+            
+        //     document.querySelector('.every').classList.add('fade-in');
+        // }
+       
  
             setTimeout(()=>{
                     const just = document.querySelector('#just')
@@ -555,15 +549,15 @@ var c = document.getElementById("c");
     
     
     
-        let topHero = document.querySelector('.top-hero-image')
-        topHero.onload = ()=>{
-            console.log('the top hero is loaded')
+        // let topHero = document.querySelector('.top-hero-image')
+        // topHero.onload = function (){
+        //     console.log('the top hero is loaded')
             
             
-            loadingWrapper.parentElement.removeChild(loadingWrapper)
+        //     loadingWrapper.parentElement.removeChild(loadingWrapper)
             
-            document.querySelector('.every').classList.add('fade-in');
-        }
+        //     document.querySelector('.every').classList.add('fade-in');
+        // }
        
     
     
@@ -577,6 +571,29 @@ var c = document.getElementById("c");
 
 
 
+         
+      
+      <!-- Three.js -->
+      <script src='https://unpkg.com/three@0.83.0'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/CopyShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/EffectComposer.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/RenderPass.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/ShaderPass.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/HorizontalBlurShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/VerticalBlurShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/FilmShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
+      <script src='https://unpkg.com/three@0.83.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
+      <script src='https://cdn.rawgit.com/felixturner/bad-tv-shader/master/BadTVShader.js'></script>
+      <script src="./presentation/presentation.js" ></script>
+     
+
+    <!--===============================================================================================-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+        <script src="./assets/map/js/map-custom.js"></script>
+    <!--===============================================================================================-->
+        
 
 
 
