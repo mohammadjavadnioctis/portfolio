@@ -1,6 +1,7 @@
   //////////
   const reactContainer = document.getElementById('react')
-  
+  let determiner = 0;
+
   
   let robot;
 
@@ -127,7 +128,6 @@ turbine.addEventListener('complete',() => {
 
 gsap.registerPlugin(ScrollTrigger)
 
-let determiner = 0;
 
 let robotIsLoaded = false
 //Lazy Loading Robot Animation
