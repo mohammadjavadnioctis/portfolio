@@ -5,7 +5,7 @@
   
   let robot;
 
-  if(!isMobile){
+  // if(!isMobile){
     var turbine = bodymovin.loadAnimation({
         container: document.querySelector('#turbine'),
         renderer: 'svg',
@@ -92,7 +92,7 @@ turbine.addEventListener('complete',() => {
  
 })
 
-    }//isMobile Closing Rag
+    // }//isMobile Closing Rag
 
     let HTlan;
     
@@ -139,7 +139,7 @@ ScrollTrigger.create({
   // markers: true,
   
   onEnter:() => {
-    if (!isMobile){
+    // if (!isMobile){
 
     if(robotIsLoaded == true){
       robot.play()
@@ -165,22 +165,25 @@ ScrollTrigger.create({
 
     }
    
-  }
+  // }
 
 
   },
   onLeave: 
   () => {
-    if (!isMobile){
-    robot.pause()}
+    // if (!isMobile){
+    robot.pause()
+  // }
   },
   onEnterBack: () => {
-    if (!isMobile){
-    robot.play()}
+    // if (!isMobile){
+    robot.play()
+  // }
   },
   onLeaveBack: () => {
-    if (!isMobile){
-    robot.pause()}
+    // if (!isMobile){
+    robot.pause()
+  // }
   }
 })
 
@@ -301,7 +304,7 @@ const batteryCheckClearInterval = function () {
 
 
 let svgInfoTaker = ()=>{}
-if(!isMobile){
+// if(!isMobile){
  svgInfoTaker = () => {
 svgTag = document.querySelector("#battery").firstElementChild;
 
@@ -314,7 +317,7 @@ svgHeightUpdater()
 
 
 }
-}
+// }
 
 
 const secondAlienDiv = document.querySelector('#second-alien') 
@@ -326,7 +329,7 @@ let alienDivWidth;
 let parsedBatteryDivHeight;
 let parsedBatteryDivMargin;
 let svgHeightUpdater=()=>{}
-if (!isMobile){
+// if (!isMobile){
   svgHeightUpdater = () => setInterval(() => {
   BatteryDivHeight = getComputedStyle(batteryDiv).height
   BatteryDivMargin = getComputedStyle(batteryDiv).marginTop
@@ -362,7 +365,7 @@ if (!isMobile){
   }
 }, 2000)
 
-}
+// }
 
 
 let heightInterval2;
