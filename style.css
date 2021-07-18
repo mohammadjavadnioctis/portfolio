@@ -478,10 +478,8 @@ align-items: center;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-shadow: 0 0 10px #1fe6f6, 0 0 20px #1fe6f6, 0 0 40px #1fe6f6, 0 0 80px #1fe6f6, 0 0 120px #1fe6f6;
-    transform: rotate(
-90deg
-);
-animation: Dflying 1s linear infinite;
+    transform: rotate(90deg);
+    /* animation: Dflying 1s linear infinite; */
 }
 
 .scroll-text{

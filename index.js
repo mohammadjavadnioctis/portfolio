@@ -807,4 +807,11 @@ setInterval(draw, 70);
 
 
 
-
+//adding box shadow and flying animatin to the flying scroll
+if(!isMobile){
+let flies = document.querySelectorAll('.scroll-fly')
+flies.forEach(fly => {
+ 
+  fly.style.animation = 'Dflying 1s linear infinite'
+})
+}
