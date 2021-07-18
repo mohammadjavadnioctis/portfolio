@@ -169,9 +169,19 @@ ScrollTrigger.create({
 
 
   },
-  onLeave: () => {robot.pause()},
-  onEnterBack: () => {robot.play()},
-  onLeaveBack: () => {robot.pause()}
+  onLeave: 
+  () => {
+    if (!isMobile){
+    robot.pause()}
+  },
+  onEnterBack: () => {
+    if (!isMobile){
+    robot.play()}
+  },
+  onLeaveBack: () => {
+    if (!isMobile){
+    robot.pause()}
+  }
 })
 
 
