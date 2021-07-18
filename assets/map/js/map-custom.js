@@ -1,14 +1,17 @@
 
 
 
-
+let mapIsLoaded = false
  ScrollTrigger.create({
     trigger:'.contact-form',
     start: 'top center',
     
     
     onEnter:() => {
-    
+        if(mapIsLoaded){
+            return
+        }
+    mapIsLoaded = true
         googleMapInitializer()
 function googleMapInitializer (jQuery) {
     // USE STRICT
