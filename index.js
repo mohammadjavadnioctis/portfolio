@@ -810,9 +810,9 @@ function draw()
 		drops[i]++;
 	}
 }
-if(!isMobile){
+
 setInterval(draw, 70);
-}
+
 
 //Matrix Rain End
 
