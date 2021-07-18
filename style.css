@@ -915,3 +915,36 @@ align-items: center;
 }
 
   /* Matrix Rain Styles end */
+
+
+
+
+
+
+  @media screen and (max-width: 600px) {
+    
+    h1{
+        text-shadow: none;
+        font-size: 2em !important;
+    }
+
+    .hero-sub-title{
+
+        text-shadow: none;
+        color: #f82ffb;
+        font-size: 1.1rem;
+    }
+
+    .neon-h3-flicker{
+        text-shadow: none;
+    }
+
+    .skill h3{
+        text-shadow: none;
+    }
+
+    .skill span {
+        animation: none !important;
+
+    }
+  }
