@@ -4,7 +4,7 @@
   
   let robot;
 
-
+  if(!isMobile){
     var turbine = bodymovin.loadAnimation({
         container: document.querySelector('#turbine'),
         renderer: 'svg',
@@ -12,6 +12,8 @@
         autoplay: false,
         path: './Animations/Robot Enerji/data.json'
       })
+      turbine.setSpeed(0.8)
+      
      
     var battery = bodymovin.loadAnimation({
         container: document.querySelector('#battery'),
@@ -20,45 +22,28 @@
         autoplay: false,
         path: './Animations/Battery/transparented bodymovin compressed/Compression Enabled/data.json'
       })
+
+
+      
+turbine.addEventListener('complete',() => {
   
-
-    let HTlan;
-    
-      let css;
-
-
-      let js;
-
-
-    var react = bodymovin.loadAnimation({
-        container: document.querySelector('#react'),
-        renderer: 'canvas',
-        loop:false,
-        autoplay: false,
-        path: './Animations/React/Transparent 81 Precent Compression/data.json'
-      })
+  turbine.setSpeed(0.5)
+   if(determiner === 0){
+     turbine.goToAndPlay(6,true)
+     battery.play()
      
+     determiner+=1;
     
+   }if(determiner === 1){
+     turbine.goToAndPlay(6,true)
+     
+   }
   
-  turbine.setSpeed(0.8)
-   let monitor = document.querySelector('.monitor')
-
-
-  
-  
-  
-  
-//Gsap And ScrollTrigger Functionality
+ })
 
 
 
-//turbine and battery animation conditions
-
-gsap.registerPlugin(ScrollTrigger)
-
-let determiner = 0;
-
-ScrollTrigger.create({
+ ScrollTrigger.create({
   trigger:'#turbine',
   start: 'top center',
   end: 'center 100px',
@@ -79,6 +64,70 @@ ScrollTrigger.create({
   onEnterBack: () => {turbine.play() ;battery.play()},
   onLeaveBack: () => {turbine.pause(); battery.pause()}
 })
+
+
+
+ battery.addEventListener('complete' ,() => {
+  if(batteryIsplayed == false){
+    batteryIsplayed = true;
+    thunder.style.height = 30 + 'vh'
+    secThunder.style.height = 30 + 'vh'
+    secthunderCopy.style.height = 30 + 'vh'
+    thunderCopy2.style.height = 30 + 'vh'
+
+     battery.goToAndPlay(60, true)
+   
+   
+     
+
+
+    //heightInterval
+  }
+  if(batteryIsplayed == true){
+    battery.goToAndPlay(60, true)
+
+  }
+
+ 
+})
+
+    }//isMobile Closing Rag
+
+    let HTlan;
+    
+      let css;
+
+
+      let js;
+
+
+    var react = bodymovin.loadAnimation({
+        container: document.querySelector('#react'),
+        renderer: 'canvas',
+        loop:false,
+        autoplay: false,
+        path: './Animations/React/Transparent 81 Precent Compression/data.json'
+      })
+     
+    
+  
+  
+   let monitor = document.querySelector('.monitor')
+
+
+  
+  
+  
+  
+//Gsap And ScrollTrigger Functionality
+
+
+
+//turbine and battery animation conditions
+
+gsap.registerPlugin(ScrollTrigger)
+
+let determiner = 0;
 
 let robotIsLoaded = false
 //Lazy Loading Robot Animation
@@ -187,45 +236,7 @@ ScrollTrigger.create({
 
  let batteryIsplayed = false;
 
-turbine.addEventListener('complete',() => {
-  
- turbine.setSpeed(0.5)
-  if(determiner === 0){
-    turbine.goToAndPlay(6,true)
-    battery.play()
-    
-    determiner+=1;
-   
-  }if(determiner === 1){
-    turbine.goToAndPlay(6,true)
-    
-  }
- 
-})
 
-battery.addEventListener('complete' ,() => {
-  if(batteryIsplayed == false){
-    batteryIsplayed = true;
-    thunder.style.height = 30 + 'vh'
-    secThunder.style.height = 30 + 'vh'
-    secthunderCopy.style.height = 30 + 'vh'
-    thunderCopy2.style.height = 30 + 'vh'
-
-     battery.goToAndPlay(60, true)
-   
-   
-     
-
-
-    //heightInterval
-  }
-  if(batteryIsplayed == true){
-    battery.goToAndPlay(60, true)
-
-  }
-
- 
-})
 
 
 //a functin that increases the height
