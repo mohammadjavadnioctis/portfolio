@@ -1,4 +1,16 @@
-(function ($) {
+
+
+
+
+ ScrollTrigger.create({
+    trigger:'.contact-form',
+    start: 'top center',
+    
+    
+    onEnter:() => {
+    
+        googleMapInitializer()
+function googleMapInitializer (jQuery) {
     // USE STRICT
     "use strict";
 
@@ -240,4 +252,12 @@
 
         });
 
-})(jQuery);
+};
+
+
+    },
+   
+  })
+  
+
+
