@@ -990,15 +990,33 @@ align-items: center;
 
 }
 
+
+
+
+.active {
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0px 0px 19px 1px rgb(248 47 251 / 70%);
+    transform: translateY(-19px);
+}
+
+
+
+
+}/* Media Query's closing qurly brace */
+
+
+@media screen and (max-width : 940px){
+
+    
 .top-hero-content{
     left: 0;
     align-items: center;
 }
 
 
+.hero-text-box {
+    display: flex;
+    flex-direction: column;
 }
-.active {
-    border: 1px solid var(--secondary-color);
-    box-shadow: 0px 0px 19px 1px rgb(248 47 251 / 70%);
-    transform: translateY(-19px);
+
 }
