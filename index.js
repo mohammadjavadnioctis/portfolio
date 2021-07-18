@@ -1,4 +1,4 @@
-  //////////
+
   const reactContainer = document.getElementById('react')
   let determiner = 0;
 
@@ -272,7 +272,7 @@ const batteryDivChildHandler = function(){
     }
     if(batteryDivChildCount == 1){
       svgInfoTaker()
-    // console.log('cleatInterval block executed')
+    //  console.log('cleatInterval block executed')
       batteryCheckClearInterval()
       
     }
@@ -295,8 +295,6 @@ if(!isMobile){
  svgInfoTaker = () => {
 svgTag = document.querySelector("#battery").firstElementChild;
 
-// console.log("battery tag's child element count",batteryDiv.childElementCount)
-// console.log(svgTag)
 let BatteryDivHeight = getComputedStyle(batteryDiv)
 let svgHeight = getComputedStyle(svgTag).height;
 
@@ -799,9 +797,9 @@ function draw()
 		drops[i]++;
 	}
 }
-
+if(!isMobile){
 setInterval(draw, 70);
-
+}
 
 //Matrix Rain End
 
