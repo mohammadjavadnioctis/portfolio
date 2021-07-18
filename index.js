@@ -500,7 +500,7 @@ css.addEventListener('complete', () => css.goToAndPlay(50,true))
 js.addEventListener('complete', () => js.goToAndPlay(60,true))
 
 
-  // if(sideThunder2.style.height == alienDivHeight){
+  
       techHoriThunder.style.width = '52%'
       techHoriThunderLeft.style.width = "52%"
       
@@ -516,7 +516,7 @@ js.addEventListener('complete', () => js.goToAndPlay(60,true))
     }
     
   
-    // }
+
   },
   
    onLeave: () => {
