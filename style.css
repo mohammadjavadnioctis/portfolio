@@ -99,7 +99,7 @@ h1{
     text-align: end;
     
 }
-
+/* 
 .f-blink{
     animation: blink linear infinite 2s;
 }
@@ -110,7 +110,7 @@ h1{
 
 .t-blink{
     animation: blink linear infinite 3s;
-}
+} */
 
 .top-anchor{
     position: absolute;
