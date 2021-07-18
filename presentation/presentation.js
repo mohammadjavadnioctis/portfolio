@@ -10,6 +10,7 @@
 
 
   const presentationChildren = document.querySelectorAll('#first-presentation-child')
+  if(!isMobile){
   presentationChildren.forEach(presentationChild => {
   
     let hologram = bodymovin.loadAnimation({
@@ -22,6 +23,22 @@
     presentationChild.style.animation = 'flying 3s linear infinite'
   
   })
+}else{
+  presentationChildren.forEach(presentationChild => {
+  
+    let hologram = bodymovin.loadAnimation({
+      container: presentationChild,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: "../Animations/animation hologram/data.json"
+    })
+    presentationChild.style.animation = 'flying 3s linear infinite'
+  
+  })
+}
+
+
 
 
   
