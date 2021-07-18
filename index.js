@@ -471,13 +471,14 @@ let technologiesAreMounted = false;
 //and lazy loading animations
 ScrollTrigger.create({
   trigger:'#technologies',
-  start: 'top center',
+  start: 'top bottom',
   end: 'center top',
   // markers: true,
   scrub: true ,
   onEnter:() => {
     if(technologiesAreMounted == false)
     {
+
       technologiesAreMounted = true
   //adding css to page
   css = bodymovin.loadAnimation({
@@ -519,11 +520,39 @@ js.addEventListener('complete', () => js.goToAndPlay(60,true))
       
 
   
-      setTimeout(() => {
-        HTLan.play()
-        css.play()
-        jsPlayer()
-      }, 1000)
+      // setTimeout(() => {
+      //   HTLan.play()
+      //   css.play()
+      //   jsPlayer()
+      // }, 1000)
+
+      HTLan.addEventListener('DOMLoaded',(e)=>{
+        const htmltechload = document.querySelector('#htmltechLoad')
+        htmltechload.parentNode.removeChild(htmltechload)
+        setTimeout(()=>{HTLan.play()},1000)
+        
+    
+      })
+
+      
+      css.addEventListener('DOMLoaded',(e)=>{
+        const csstechload = document.querySelector('#csstechLoad')
+        csstechload.parentNode.removeChild(csstechload)
+        setTimeout(()=>{css.play()},1000)
+        
+    
+      })
+
+      js.addEventListener('DOMLoaded',(e)=>{
+        const jstechload = document.querySelector('#jstechLoad')
+        jstechload.parentNode.removeChild(jstechload)
+        setTimeout(()=>{js.play()},1000)
+        
+    
+      })
+
+
+
       
 
     }
