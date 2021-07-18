@@ -504,15 +504,18 @@ js.addEventListener('complete', () => js.goToAndPlay(60,true))
       techHoriThunder.style.width = '52%'
       techHoriThunderLeft.style.width = "52%"
       
+
+  
+      setTimeout(() => {
+        HTLan.play()
+        css.play()
+        jsPlayer()
+      }, 1000)
+      
+
     }
     
   
-        setTimeout(() => {
-          HTLan.play()
-          css.play()
-          jsPlayer()
-        }, 1000)
-        
     // }
   },
   
