@@ -7,10 +7,11 @@
 body{
    
     background-color: #1b1b1b;
-    display: flex;
-    justify-content: center;
     font-family: 'Share Tech Mono', monospace;
-    
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    overflow-x: hidden;
     
 }
 
@@ -666,7 +667,7 @@ align-items: center;
 
 .navigation-bar{
     height: 100vh;
-    width: 10%;
+    width: 20%;
     /* background: #292929;  */
     border: 2px solid #2980B9;
     box-shadow: 0px 0px 6px 1px rgb(93 173 226 / 70%);
@@ -947,4 +948,57 @@ align-items: center;
         animation: none !important;
 
     }
+
+.navigation-bar{
+    height: 15vh;
+    width: 100%;
+    /* background: #292929; */
+    border: 2px solid #2980B9;
+    box-shadow: 0px 0px 6px 1px rgb(93 173 226 / 70%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: inline-flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    flex-direction: row;
+    top: 100vh;
+    transform: translateY(-100%);
+
   }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 18%;
+    text-align: center;
+    border: 1px solid aqua;
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 0px 19px 1px rgb(93 173 226 / 70%);
+    transform: none;
+    
+
+  }
+
+.top-hero{
+
+    transform: none;
+
+}
+
+.top-hero-content{
+    left: 0;
+    align-items: center;
+}
+
+
+}
+.active {
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0px 0px 19px 1px rgb(248 47 251 / 70%);
+    transform: translateY(-19px);
+}
