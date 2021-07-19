@@ -104,7 +104,7 @@ h1{
     text-align: end;
     
 }
-/* 
+/*  
 .f-blink{
     animation: blink linear infinite 2s;
 }
@@ -1013,7 +1013,15 @@ align-items: center;
 
 
 }/* Media Query's closing qurly brace */
-
+@media screen and (min-width: 1000px){
+    .f-blink{
+        animation: blink linear infinite 2s;
+    }
+/*     
+    .s-blink{
+        animation: blink linear infinite 1s;
+    } */
+}
 
 @media screen and (max-width : 940px){
 
