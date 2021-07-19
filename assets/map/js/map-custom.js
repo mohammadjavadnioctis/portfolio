@@ -11,6 +11,7 @@ let mapIsLoaded = false
         if(mapIsLoaded){
             return
         }
+
     mapIsLoaded = true
         googleMapInitializer()
 function googleMapInitializer (jQuery) {
@@ -253,12 +254,30 @@ function googleMapInitializer (jQuery) {
                 })(marker, i));
             }
 
+            
+
         });
 
 };
 
 
-    },
+  
+setTimeout( () => {
+     
+const googleDismissButton = document.querySelector('.dismissButton');
+  if(googleDismissButton)
+  console.log('the se Timeout executed')
+  {
+
+    // console.log('this is dismiss button ', googleDismissButton)
+googleDismissButton.click()
+  }
+}     
+  ,2000)
+  }
+
+
+    
    
   })
   

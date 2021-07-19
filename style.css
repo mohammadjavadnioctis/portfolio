@@ -40,6 +40,10 @@ body{
   }
 }
 
+
+#robot-spacer{
+    margin: 9rem auto 0rem auto;
+}
 /*primary color: #f7faf9
 rgba(255,255,255,1)
 
@@ -176,7 +180,7 @@ h1{
     position: relative;
     width: 100%;
     height: 90vh;
-    border-top: 2px solid aqua;
+    /* border-top: 2px solid aqua; */
     
     display: flex;
     align-items: flex-end;
@@ -190,6 +194,9 @@ h1{
    
 }
 
+.dismissButton{
+    display: none;
+}
 
 .hero svg{
     width: 100%;
@@ -285,7 +292,7 @@ max-height: 90%;
     width: 30%;
     /* height: 45vh; */
     /* min-height: 300px; */
-    border: solid 1px orange; */
+    /* border: solid 1px orange;  */
 }
 
 
@@ -626,6 +633,7 @@ align-items: center;
 
 #works-title{
     margin-bottom: 28vh;
+    margin-top: 19vh;
 }
 
 
@@ -887,7 +895,13 @@ align-items: center;
     /* mix-blend-mode: lighten; */
 }
 
-
+.loving-robot{
+    width: 18%;
+    
+    position: relative;
+    margin-top: 5rem;
+    animation: Dflying 3s linear infinite;
+}
 
 .matrix-container{
     position: relative;
@@ -897,8 +911,9 @@ align-items: center;
     align-items: center;
     width: 100%;
     height: 70vh;
-    border: 3px solid orangered;
     margin-top: 21vh;
+    box-shadow: 0 101px 54px 24px #292929d9, 0 -101px 54px 24px #292929d9;
+    background: #292929d9;
 }
 
 
@@ -907,11 +922,9 @@ align-items: center;
     z-index: 2;
     width: 60%;
     height: 100%;
-    border: 3px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 
 }
 

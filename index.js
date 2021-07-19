@@ -114,7 +114,7 @@ turbine.addEventListener('complete',() => {
   
   
    let monitor = document.querySelector('.monitor')
-
+   let lovingRobot = document.querySelector('.loving-robot')
 
   
   
@@ -134,7 +134,7 @@ let robotIsLoaded = false
 let hero = document.querySelector('.hero')
 ScrollTrigger.create({
   trigger:'.hero',
-  start: 'top center',
+  start: 'top bottom',
   end: 'center 100px',
   // markers: true,
   
@@ -209,7 +209,8 @@ ScrollTrigger.create({
   onEnter:() => {
     
     // monitor.src = monitor.dataset.src
-    lazyLoadingImgTags(monitor)    
+    lazyLoadingImgTags(monitor) 
+    lazyLoadingImgTags(lovingRobot)   
     c.style.display = 'unset'
     setTimeout( ()=>{
       c.height = monitor.getBoundingClientRect().width/1.7;
@@ -677,27 +678,27 @@ navigators.forEach(navigator => {
 
 
 
-  ScrollTrigger.create({
-    trigger:'.contact-form',
-    start: 'top bottom',
+  // ScrollTrigger.create({
+  //   trigger:'.contact-form',
+  //   start: 'top bottom',
    
     
     
-    onEnter:() => {
+  //   onEnter:() => {
       
-  const googleDismissButton = document.querySelector('.dismissButton');
-  setTimeout( () => {
-    if(googleDismissButton)
-    {
+  // const googleDismissButton = document.querySelector('.dismissButton');
+  // setTimeout( () => {
+  //   if(googleDismissButton)
+  //   {
 
-      // console.log('this is dismiss button ', googleDismissButton)
-  googleDismissButton.click()
-    }
-  }     
-    ,1000)
-    },
+  //     // console.log('this is dismiss button ', googleDismissButton)
+  // googleDismissButton.click()
+  //   }
+  // }     
+  //   ,1000)
+  //   },
     
-  })
+  // })
   
 
 
