@@ -18,7 +18,7 @@ let hologramIsLoaded  = false
 
   ScrollTrigger.create({
     trigger:'#first-presentation-child',
-    start: 'top center',
+    start: 'top bottom',
     end: 'center 100px',
     // markers: true,
     
@@ -31,7 +31,7 @@ if (hologramIsLoaded){
 }
 
 hologramIsLoaded = true
-      if(!isMobile){
+     
         presentationChildren.forEach(presentationChild => {
         
           let hologram = bodymovin.loadAnimation({
@@ -44,20 +44,6 @@ hologramIsLoaded = true
           presentationChild.style.animation = 'flying 3s linear infinite'
         
         })
-      }else{
-        presentationChildren.forEach(presentationChild => {
-        
-          let hologram = bodymovin.loadAnimation({
-            container: presentationChild,
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: "../Animations/animation hologram/data.json"
-          })
-          presentationChild.style.animation = 'flying 3s linear infinite'
-        
-        })
-      }
       
       
       

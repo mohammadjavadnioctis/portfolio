@@ -46,7 +46,7 @@ turbine.addEventListener('complete',() => {
 
  ScrollTrigger.create({
   trigger:'#turbine',
-  start: 'top center',
+  start: 'top 70%',
   end: 'center 100px',
   // markers: true,
   
@@ -591,9 +591,9 @@ document.querySelector('#react-container').appendChild(reactBottomThunder)
 
 ScrollTrigger.create({
   trigger:'#react-container',
-  start: 'top center',
+  // start: 'top 80%',
   end: 'center top',
-  // markers: true,
+  markers: true,
   scrub: true ,
   onEnter:() => {
    
