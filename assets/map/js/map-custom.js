@@ -11,7 +11,9 @@ let mapIsLoaded = false
         if(mapIsLoaded){
             return
         }
-
+if(isMobile){
+    return
+}
     mapIsLoaded = true
         googleMapInitializer()
 function googleMapInitializer (jQuery) {

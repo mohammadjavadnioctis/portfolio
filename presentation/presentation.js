@@ -10,33 +10,105 @@
 
 
   const presentationChildren = document.querySelectorAll('#first-presentation-child')
-  if(!isMobile){
-  presentationChildren.forEach(presentationChild => {
-  
-    let hologram = bodymovin.loadAnimation({
-      container: presentationChild,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: "../Animations/animation hologram/data.json"
-    })
-    presentationChild.style.animation = 'flying 3s linear infinite'
-  
-  })
-}else{
-  presentationChildren.forEach(presentationChild => {
-  
-    let hologram = bodymovin.loadAnimation({
-      container: presentationChild,
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: "../Animations/animation hologram/data.json"
-    })
-    presentationChild.style.animation = 'flying 3s linear infinite'
-  
-  })
+
+
+
+
+let hologramIsLoaded  = false
+
+  ScrollTrigger.create({
+    trigger:'#first-presentation-child',
+    start: 'top center',
+    end: 'center 100px',
+    // markers: true,
+    
+    onEnter:() => {
+     
+
+
+if (hologramIsLoaded){
+  return
 }
+
+hologramIsLoaded = true
+      if(!isMobile){
+        presentationChildren.forEach(presentationChild => {
+        
+          let hologram = bodymovin.loadAnimation({
+            container: presentationChild,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "../Animations/animation hologram/data.json"
+          })
+          presentationChild.style.animation = 'flying 3s linear infinite'
+        
+        })
+      }else{
+        presentationChildren.forEach(presentationChild => {
+        
+          let hologram = bodymovin.loadAnimation({
+            container: presentationChild,
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: "../Animations/animation hologram/data.json"
+          })
+          presentationChild.style.animation = 'flying 3s linear infinite'
+        
+        })
+      }
+      
+      
+      
+
+
+
+
+
+
+      const projectorFinder = setInterval(() => {
+  
+        let hologramEl = document.querySelector('#first-presentation-child').children[1];
+        
+        
+      
+        hologramEl.style.width = "43%"
+        hologramEl.style.height = "20%"
+        hologramEl.style.position = "relative"
+        // hologramEl.style.z-index = "3"
+        // hologramEl.style.border = "3px solid blue"
+        hologramEl.style.margin = "0 auto"
+      
+      console.log('projectorFinder executed')
+        if(hologramEl !== undefined){
+          projectorFinderkill()
+        }
+      
+      }, 1000);
+      
+
+
+
+
+
+      function projectorFinderkill () {
+        clearInterval(projectorFinder)
+      }
+      
+        
+      
+      // childNo1.style.animation = 'flying 3s linear infinite'
+      const secondChild = document.querySelector('.parent').children[1];
+      secondChild.style.flexGrow = 2;
+      
+
+    }//onEnter closing Brace
+    
+  })
+  
+
+
 
 
 
@@ -84,26 +156,6 @@
 
 //End of The hologram Functionality
 
-const projectorFinder = setInterval(() => {
-  
-  let hologramEl = document.querySelector('#first-presentation-child').children[1];
-  
-  
-
-  hologramEl.style.width = "43%"
-  hologramEl.style.height = "20%"
-  hologramEl.style.position = "relative"
-  // hologramEl.style.z-index = "3"
-  // hologramEl.style.border = "3px solid blue"
-  hologramEl.style.margin = "0 auto"
-
-console.log('projectorFinder executed')
-  if(hologramEl !== undefined){
-    projectorFinderkill()
-  }
-
-}, 1000);
-
 
 
 
@@ -138,19 +190,6 @@ console.log('projectorFinder executed')
 
 
 
-
-
-
-
-function projectorFinderkill () {
-  clearInterval(projectorFinder)
-}
-
-  
-
-// childNo1.style.animation = 'flying 3s linear infinite'
-const secondChild = document.querySelector('.parent').children[1];
-secondChild.style.flexGrow = 2;
 
 // let clones = [];
 

@@ -790,7 +790,7 @@ let english =   'HTML CSS JS React FireB Gsap JQuery WP'
 
 let font_size;
 if(isMobile){
-   font_size = 5;
+   font_size = 9;
 }else{
    font_size = 15;
 }
