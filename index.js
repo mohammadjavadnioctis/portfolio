@@ -386,7 +386,7 @@ const heightInterval = function (element, desiredam){
 
   const secthunderCopy = secThunder.cloneNode(true);
   secthunderCopy.id = "fourthThunder"
-  secthunderCopy.style.right = '24%';
+  secthunderCopy.style.right = '36%';
    powerUnit.appendChild(secthunderCopy);
 
 
@@ -394,7 +394,7 @@ const heightInterval = function (element, desiredam){
 
  const thunderCopy2 = thunder.cloneNode(true)
  thunderCopy2.id = 'thirdThunder'; 
- thunderCopy2.style.right = '21%';
+ thunderCopy2.style.right = '34%';
  powerUnit.appendChild(thunderCopy2)
 
 
@@ -788,7 +788,13 @@ let english =   'HTML CSS JS React FireB Gsap JQuery WP'
 //converting the string into an array of single characters
  english = english.split(" ");
 
-var font_size = 15;
+
+if(!isMobile){
+  let font_size = 5;
+}else{
+  var font_size = 15;
+}
+
 var columns = c.width/font_size; //number of columns for the rain
 //an array of drops - one per column
 var drops = [];

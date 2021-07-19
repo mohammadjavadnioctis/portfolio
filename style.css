@@ -373,7 +373,7 @@ svg{
     background-color: rgb(255, 255, 255);
     
     position: absolute;
-    right: 11.5%;
+    right: 26.5%;
    z-index: 1;
     filter: url(#wavy);
    /* transform:rotate(180deg); */
@@ -506,7 +506,7 @@ align-items: center;
     background-color: rgb(255, 255, 255);
     /* visibility : hidden; */
     position: absolute;
-    right: 14.5%;
+    right: 28.5%;
    z-index: 1;
     filter: url(#wavy2);
     /* transform:rotate(-10deg); */
