@@ -788,11 +788,11 @@ let english =   'HTML CSS JS React FireB Gsap JQuery WP'
 //converting the string into an array of single characters
  english = english.split(" ");
 
-
-if(!isMobile){
-  let font_size = 5;
+let font_size;
+if(isMobile){
+   font_size = 5;
 }else{
-  var font_size = 15;
+   font_size = 15;
 }
 
 var columns = c.width/font_size; //number of columns for the rain
