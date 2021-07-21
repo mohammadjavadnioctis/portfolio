@@ -753,6 +753,7 @@ align-items: center;
     font-weight: normal;
     font-size: 1.1rem;
     color: white;
+    margin-bottom: 3rem;
 }
 
 .about-text{
@@ -775,6 +776,8 @@ align-items: center;
     height: unset;
     z-index: 0;
     min-width: unset;
+    box-shadow: 14px 12px 19px -6px rgb(93 173 226 / 70%);
+
 }
 
 @keyframes animate{

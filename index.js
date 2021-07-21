@@ -227,22 +227,22 @@ ScrollTrigger.create({
 
 let mjsPicIsLoaded = false;
 
-ScrollTrigger.create({
-  trigger:'.about-me',
-  start: 'top 70%',
-  end: 'center top',
-  // markers: true,
+// ScrollTrigger.create({
+//   trigger:'.about-me',
+//   start: 'top 70%',
+//   end: 'center top',
+//   // markers: true,
   
-  onEnter:() => {
-    let mjsPicture = document.querySelector('.mjspicture')
-    if(!mjsPicIsLoaded){
-      lazyLoadingImgTags(mjsPicture) 
+//   onEnter:() => {
+//     let mjsPicture = document.querySelector('.mjspicture')
+//     if(!mjsPicIsLoaded){
+//       lazyLoadingImgTags(mjsPicture) 
         
-    }
+//     }
  
-  },
+//   },
  
-})
+// })
 
 
 

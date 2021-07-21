@@ -107,8 +107,8 @@ top: 0;
   --glitch-height: 100vh;
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
-  --time-anim: 5s;
-  --delay-anim: 0.1s;
+  --time-anim: 13s;
+  --delay-anim: none;
   --blend-mode-1: none;
   --blend-mode-2: none;
   --blend-mode-3: none;
@@ -195,6 +195,9 @@ e
     top: 0;
     left: 0;
     position: absolute;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 #mjspic{
@@ -204,7 +207,6 @@ e
 .glitch .glitch__item:nth-child(n+2) {
   opacity: 0;
   animation-duration: var(--time-anim);
-  animation-delay: var(--delay-anim);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -258,13 +260,13 @@ e
   left: 2px;
   text-shadow: -1px 0 #00ffea;
   clip: rect(24px, 550px, 90px, 0);
-  animation: glitch-anim 2s linear infinite alternate-reverse;
+  animation: glitch-anim 1s linear infinite alternate-reverse;
 }
 .glitch .glitch__title:after {
   left: -2px;
   text-shadow: -1px 0 #fe3a7f;
   clip: rect(85px, 550px, 140px, 0);
-  animation: glitch-anim 2s 1s linear infinite alternate-reverse;
+  animation: glitch-anim 1s 1s linear infinite alternate-reverse;
 }
 
 
