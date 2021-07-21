@@ -551,6 +551,9 @@ js.addEventListener('complete', () => js.goToAndPlay(60,true))
       // }, 1000)
 
       HTLan.addEventListener('DOMLoaded',(e)=>{
+
+        document.querySelector('#html').classList.add('fade-in')
+
         const htmltechload = document.querySelector('#htmltechLoad')
         htmltechload.parentNode.removeChild(htmltechload)
         setTimeout(()=>{HTLan.play()},1000)
@@ -560,6 +563,9 @@ js.addEventListener('complete', () => js.goToAndPlay(60,true))
 
       
       css.addEventListener('DOMLoaded',(e)=>{
+
+        document.querySelector('#css').classList.add('fade-in')
+
         const csstechload = document.querySelector('#csstechLoad')
         csstechload.parentNode.removeChild(csstechload)
         setTimeout(()=>{css.play()},1000)
@@ -568,6 +574,9 @@ js.addEventListener('complete', () => js.goToAndPlay(60,true))
       })
 
       js.addEventListener('DOMLoaded',(e)=>{
+
+        document.querySelector('#js').classList.add('fade-in')
+
         const jstechload = document.querySelector('#jstechLoad')
         jstechload.parentNode.removeChild(jstechload)
         setTimeout(()=>{js.play()},1000)
