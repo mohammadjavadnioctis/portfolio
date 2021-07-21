@@ -768,10 +768,13 @@ align-items: center;
     margin: 0;
 }
 
-.mjspicture{
+#mjspic{
     width: 48%;
     position: absolute;
     bottom: 0;
+    height: unset;
+    z-index: 0;
+    min-width: unset;
 }
 
 @keyframes animate{

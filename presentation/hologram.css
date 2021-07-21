@@ -107,8 +107,8 @@ top: 0;
   --glitch-height: 100vh;
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
-  --time-anim: 4s;
-  --delay-anim: 2s;
+  --time-anim: 5s;
+  --delay-anim: 0.1s;
   --blend-mode-1: none;
   --blend-mode-2: none;
   --blend-mode-3: none;
@@ -169,7 +169,7 @@ e
 
 
 .glitch {
-  width: 100%;
+    width: 100%;
     height: 100%;
     /* max-width: 100%; */
     position: relative;
@@ -186,6 +186,19 @@ e
     top: 0;
     left: 0;
     position: absolute;
+}
+
+#mjspic .glitch .glitch__item {
+  background: url(../assets/images/transparent\ hoddie-wearing-man-back-to-the-camera.png) no-repeat 50% 50%/cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#mjspic{
+
 }
 
 .glitch .glitch__item:nth-child(n+2) {
