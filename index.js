@@ -223,6 +223,29 @@ ScrollTrigger.create({
   onLeaveBack: () => {}
 })
 
+//lazy loading mjspic 
+
+let mjsPicIsLoaded = false;
+
+ScrollTrigger.create({
+  trigger:'.about-me',
+  start: 'top 70%',
+  end: 'center top',
+  // markers: true,
+  
+  onEnter:() => {
+    let mjsPicture = document.querySelector('.mjspicture')
+    if(!mjsPicIsLoaded){
+      lazyLoadingImgTags(mjsPicture) 
+        
+    }
+ 
+  },
+ 
+})
+
+
+
 
 window.addEventListener('resize', ()=> {
 	console.log('resizzed')
