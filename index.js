@@ -899,3 +899,19 @@ flies.forEach(fly => {
   fly.style.animation = 'Dflying 1s linear infinite'
 })
 }
+
+
+//adding links to the title of the projects
+
+document.querySelector('#filmedia').addEventListener('click',()=>{
+  
+  // window.location.href = 'https://sleepy-einstein-b6ec5c.netlify.app/'
+  window.open('https://sleepy-einstein-b6ec5c.netlify.app/', '_blank');
+  
+})
+
+document.querySelector('#photographer-portfolio').addEventListener('click',()=>{
+  
+  // window.location.href = 'https://sleepy-einstein-b6ec5c.netlify.app/'
+  window.open('https://thirsty-roentgen-6209bb.netlify.app/', '_blank');
+})

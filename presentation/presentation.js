@@ -18,7 +18,7 @@ let hologramIsLoaded  = false
 
   ScrollTrigger.create({
     trigger:'#first-presentation-child',
-    start: 'top bottom',
+    start: 'top center',
     end: 'center 100px',
     // markers: true,
     
@@ -32,6 +32,8 @@ if (hologramIsLoaded){
 
 hologramIsLoaded = true
      
+
+
         presentationChildren.forEach(presentationChild => {
         
           let hologram = bodymovin.loadAnimation({
@@ -45,13 +47,29 @@ hologramIsLoaded = true
         
         })
       
-      
-      
+      if(!isMobile){
+        const particleFirstChildren = document.querySelectorAll('.particle-first-child')
+        particleFirstChildren.forEach(particle => {
+          particle.style.animation = "particle-left-to-right 1s 0s linear infinite"
+        })
 
+        
+        const particleSecondChildren = document.querySelectorAll('.particle-second-child')
+        particleSecondChildren.forEach(particle => {
+          particle.style.animation = "particle-top-to-bottom 1s 0.3s linear infinite"
+        })
+        
+        const particleThirdChildren = document.querySelectorAll('.particle-third-child')
+        particleThirdChildren.forEach(particle => {
+          particle.style.animation = "particle-right-to-left 1s 1s linear infinite"
+        })
+        
+        const particleFourthChildren = document.querySelectorAll('.particle-fourth-child')
+        particleFourthChildren.forEach(particle => {
+          particle.style.animation = "particle-bottom-to-top 1s 0.33s linear infinite"
+        })
 
-
-
-
+      }
 
       const projectorFinder = setInterval(() => {
   

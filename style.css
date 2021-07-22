@@ -89,7 +89,6 @@ h1{
 }
 .created-title img{
     width: 5vw;
-    height: 100%;
     display: inline-block;
     z-index: 1;
     transform: translateX(-183%);
@@ -636,10 +635,10 @@ align-items: center;
 
 
 .work-title{
-    position: absolute;
     z-index: 10;
     text-align: center;
     top: -46px;
+    margin-bottom: 1rem;
 }
 
 .works:nth-child(even){
@@ -658,9 +657,6 @@ align-items: center;
 }
 
 
-.row-reverse{
-    flex-direction: row-reverse;
-}
 
 .contact-form{
     border-image-width: 100%;
@@ -767,6 +763,13 @@ align-items: center;
 
 .about-text h1{
     margin: 0;
+}
+.clickable{
+    cursor: pointer;
+}
+
+#filmedia:hover{
+    
 }
 
 #mjspic{
@@ -889,7 +892,7 @@ align-items: center;
   .glitch-container{
 
     min-width: 100%;
-    height: 60%;
+    height: 75%;
     overflow: hidden;
     /* border: 2px solid yellow; */
     position: relative;
@@ -1079,5 +1082,131 @@ align-items: center;
     overflow: hidden;
 }
 
+.particle-duration{
+    animation-duration: 10s !important;
+}
 
 
+
+
+
+
+
+
+
+/* particle animations */
+
+
+.particle-container{
+    overflow: hidden;
+    position: relative;
+}
+
+.particle-container .particle{
+    position: absolute;
+    display: block;
+}
+
+.particle-container .particle:nth-child(1){
+    top: 0;
+    left: -100%;
+    width:100%;
+    height: 2px;
+    background: linear-gradient(-90deg,aqua, transparent);
+    /* animation: particle-left-to-right 1s 0s linear infinite; */
+}
+
+.particle-container .particle:nth-child(2){
+    top: -100%;
+    left: 99%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(-0deg,aqua, transparent);
+    /* animation: particle-top-to-bottom 1s 0.3s linear infinite; */
+}
+
+
+.particle-container .particle:nth-child(3){
+    bottom: 0px;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,aqua, transparent);
+    /* animation: particle-right-to-left 1s 1s linear infinite; */
+
+}
+
+
+
+
+.particle-container .particle:nth-child(4){
+    bottom: -100%;
+    right: 99%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,aqua, transparent);
+    /* animation: particle-bottom-to-top 1s 0.33s linear infinite; */
+
+}
+
+
+
+
+@keyframes particle-left-to-right{
+    from{
+    /* left: -100%; */
+    transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(200%);
+    
+        /* left: 100%; */
+    }
+    }
+    
+    
+    @keyframes particle-right-to-left{
+    from{
+        transform: translateX(200%);
+    
+    }
+    to{
+        transform: translateX(-200%);
+    
+    }
+    }
+    
+    @keyframes particle-top-to-bottom{
+    from{
+    /* top: -100%; */
+    transform: translateY(-200%);
+    
+    }
+    to{
+        transform: translateY(200%);
+    
+     /* top: 100%; */
+    }
+    }
+    
+    @keyframes particle-bottom-to-top{
+    from{
+        transform: translateY(200%);
+    
+    /* bottom: -100%; */
+    }
+    to{
+     /* bottom: 100%;
+      */
+      transform: translateY(-200%);
+    
+    }
+    }
+
+    .animation-delay{
+        animation-delay: 1.5s;
+    }
+    
+    
+
+/* particle animatins end */
