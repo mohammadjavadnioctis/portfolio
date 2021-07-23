@@ -49,6 +49,8 @@
     </style>
     
     <link rel="stylesheet" href="style.css">
+     <!-- mail library -->
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -421,24 +423,24 @@
 
  <div class="box">
         <h2>Let's Talk </h2>
-        <form action="">
+        <form method="POST" class="contact-form">
             <div>
-                <input type="text" name="" required=''>
+                <input type="text" name="" required='' class="name">
                 <label for="">Name</label>
             </div>
             <div>
-                <input type="email" name="" required=''>
+                <input type="email" name="" required='' class="email">
                 <label for="">Email</label>
             </div>
             <div>
-                <input type="text" name="" required='' id="subject">
+                <input type="text" name="" required='' id="subject" class="message">
                 <label for="">Subject</label>
             </div>
             <div>
                 <textarea name="" id="" cols="30" rows="10" required='' id="message"></textarea>
                 <label for="">Message</label>
             </div>
-            <input type="submit" name="" value="Submit" id="submit">
+            <input type="submit" name="" value="Submit" id="submit" >
         </form>
     </div>
 
@@ -603,7 +605,7 @@ var c = document.getElementById("c");
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
         <script src="./assets/map/js/map-custom.js"></script>
     <!--===============================================================================================-->
-        
+   
 
 
 

@@ -267,9 +267,7 @@ function googleMapInitializer (jQuery) {
 setTimeout( () => {
      
 const googleDismissButton = document.querySelector('.dismissButton');
-  if(googleDismissButton)
-  console.log('the se Timeout executed')
-  {
+  if(googleDismissButton){
 
     // console.log('this is dismiss button ', googleDismissButton)
 googleDismissButton.click()

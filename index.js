@@ -915,3 +915,55 @@ document.querySelector('#photographer-portfolio').addEventListener('click',()=>{
   // window.location.href = 'https://sleepy-einstein-b6ec5c.netlify.app/'
   window.open('https://thirsty-roentgen-6209bb.netlify.app/', '_blank');
 })
+
+
+
+//Email functionality
+
+document.querySelector('.contact-form').addEventListener('submit', submitForm)
+
+function submitForm(e){
+  e.preventDefault()
+
+  //Get Input Values
+
+  let name  = document.querySelector('.name').value
+  let email  = document.querySelector('.email').value
+  let message  = document.querySelector('.message').value
+  // saveContactInfo(name, email, message)
+  
+  sendEmail(name, email, message)
+  
+}
+
+
+
+
+
+
+function sendEmail(name, email, message) {
+  console.log("sendEmail executed")
+  console.log('this is name', name)
+  console.log('this is email', email)
+  
+  console.log('this is message', message)
+  Email.send({ 
+    Host: "smtp.elasticemail.com",
+    Username: "mjsweb.sitesend@gmail.com",
+    Port: 2525,
+    Password: "ABC5E5C40D214FB186C3BAE6237535F73061",
+    To: 'mjsweb.sitesend@gmail.com',
+    From: "mjsweb.sitesend@gmail.com",
+    Subject: `${name} sent an Email`,
+    Body: `Email: ${email} </br> message: ${message}`,
+  })
+    .then(function (message) {
+      console.log(message)
+      alert("mail sent successfully")
+    });
+}
+
+
+
+
+
