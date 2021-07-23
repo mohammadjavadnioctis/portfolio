@@ -225,24 +225,30 @@ ScrollTrigger.create({
 
 //lazy loading mjspic 
 
-let mjsPicIsLoaded = false;
+let aboutThunderIsLoaded = false;
 
-// ScrollTrigger.create({
-//   trigger:'.about-me',
-//   start: 'top 70%',
-//   end: 'center top',
-//   // markers: true,
+ScrollTrigger.create({
+  trigger:'.about-me',
+  start: 'top 70%',
+  end: 'center top',
+  // markers: true,
   
-//   onEnter:() => {
-//     let mjsPicture = document.querySelector('.mjspicture')
-//     if(!mjsPicIsLoaded){
-//       lazyLoadingImgTags(mjsPicture) 
-        
-//     }
+  onEnter:() => {
+    // let mjsPicture = document.querySelector('.mjspicture')
+    const aboutThunder = document.querySelector('#about-thunder')
+    const aboutThunder2 = document.querySelector('#about-thunder2')
+
+    if(!aboutThunderIsLoaded){
+      aboutThunderIsLoaded = true;
+      // lazyLoadingImgTags(mjsPicture) 
+      lazyLoadingImgTags(aboutThunder) 
+      lazyLoadingImgTags(aboutThunder2) 
+      
+    }
  
-//   },
+  },
  
-// })
+})
 
 
 
@@ -920,6 +926,9 @@ document.querySelector('#photographer-portfolio').addEventListener('click',()=>{
 
 //Email functionality
 
+let name;
+
+
 document.querySelector('.contact-form').addEventListener('submit', submitForm)
 
 function submitForm(e){
@@ -955,15 +964,21 @@ function sendEmail(name, email, message) {
     To: 'mjsweb.sitesend@gmail.com',
     From: "mjsweb.sitesend@gmail.com",
     Subject: `${name} sent an Email`,
-    Body: `Email: ${email} </br> message: ${message}`,
+    Body: `Name: ${name} <br/> Email: ${email} <br/> message: ${message}`,
   })
     .then(function (message) {
       console.log(message)
-      alert("mail sent successfully")
+      alert("mail sent successfully I'll respond as soon as I can !")
+      clearInputFields()
     });
 }
 
 
-
+function clearInputFields(name, email, message){
+  document.querySelector('.name').value = ''
+  document.querySelector('.email').value = ''
+  document.querySelector('.message').value = ''
+  document.querySelector('.subject').value = ''
+}
 
 
