@@ -131,7 +131,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 let robotIsLoaded = false
 //Lazy Loading Robot Animation
+
+let rPlayButtonImg = document.querySelector('.play-button-image')
+rPlayButtonImg.addEventListener('click', ()=>{
+  let heroSubLoading = document.querySelector('#hero-subloading')
+  let rPlayButton = document.querySelector('.play-button')
+  rPlayButton.style.visibility = 'hidden'
+  heroSubLoading.style.visibility = 'visible'
+
+  robotLoad()
+
+
+})
+
+
 let hero = document.querySelector('.hero')
+function robotLoad(){
 ScrollTrigger.create({
   trigger:'.hero',
   start: 'top bottom',
@@ -187,6 +202,7 @@ ScrollTrigger.create({
   }
 })
 
+}//robotLoading closing brance
 
 //lazyloading monitor
 
@@ -387,7 +403,9 @@ let svgHeightUpdater=()=>{}
      console.log('horizontal expalndder is executed')
     executed = true;
     setTimeout( () => {
+
       horizontalThunder.style.width = 100 + 'vw' 
+      horizontalThunder.style.visibility = 'visible' 
       
       horizontalThunder.style.right = 0; 
       sideThunderExpander()
