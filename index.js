@@ -148,7 +148,7 @@ ScrollTrigger.create({
        robotIsLoaded = true
    robot = bodymovin.loadAnimation({
     container: document.querySelector('.hero'),
-    renderer: 'svg',
+    renderer: 'canvas',
     loop: false,
     autoplay: false,
     path: './Animations/Robot/data.json'

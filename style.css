@@ -988,7 +988,7 @@ width: 5%;
   @media screen and (max-width: 600px) {
     
     h1{
-        text-shadow: none;
+        /* text-shadow: none; */
         font-size: 2em !important;
     }
 
@@ -998,7 +998,7 @@ width: 5%;
 
     .hero-sub-title{
 
-        text-shadow: none;
+        /* text-shadow: none; */
         color: #f82ffb;
         font-size: 1.1rem;
     }
@@ -1014,7 +1014,7 @@ width: 5%;
     }
 
     .neon-h3-flicker{
-        text-shadow: none;
+        /* text-shadow: none; */
     }
 
     .skill h3{
@@ -1094,7 +1094,7 @@ width: 5%;
 .active {
     border: 1px solid var(--secondary-color);
     box-shadow: 0px 0px 19px 1px rgb(248 47 251 / 70%);
-    transform: translateY(-19px);
+    transform: translate(0, -19px);
 }
 
 .about-me{
