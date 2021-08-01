@@ -1109,6 +1109,9 @@ width: 5%;
 .about-me{
     height: unset;
     margin-bottom: 10rem;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: normal;
 }
 
 .about-text h1{
@@ -1116,7 +1119,15 @@ width: 5%;
 }
 
 #mjspic{
-    width: 100%;
+    width: 94%;
+    height: 45vh;
+    position: inherit;
+    align-self: flex-end;
+
+}
+    #mjspic .glitch .glitch__item {
+        border-top: none;
+
 }
 }/* Media Query's closing qurly brace */
 @media screen and (min-width: 1000px){

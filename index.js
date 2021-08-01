@@ -758,6 +758,9 @@ navigators.forEach(navigator => {
   //hiding thunders on macOS    
   if(safariAgent){
   let lines = document.querySelectorAll('.line')
+  let secLines = document.querySelectorAll('.secline')
+  
+  secLines.forEach(line=>{line.style.display = 'none'})
   lines.forEach(line=>{line.style.display = 'none'})
   }
   })
