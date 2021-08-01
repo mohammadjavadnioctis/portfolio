@@ -628,6 +628,10 @@ align-items: center;
 
 }
 
+.box h4{
+    margin-bottom: 1rem;
+}
+
 #works-title{
     margin-bottom: 28vh;
     margin-top: 19vh;
@@ -988,11 +992,25 @@ width: 5%;
         font-size: 2em !important;
     }
 
+        .robotan{
+            height: 60vh;
+        }
+
     .hero-sub-title{
 
         text-shadow: none;
         color: #f82ffb;
         font-size: 1.1rem;
+    }
+    #root-spacer{
+        margin: -2rem auto 0rem auto;
+    
+    }
+    #powerUnit{
+        margin: 0 0;
+    }
+    #powerUnit{
+        margin-top: 0;
     }
 
     .neon-h3-flicker{
@@ -1006,6 +1024,18 @@ width: 5%;
     .skill span {
         animation: none !important;
 
+    }
+
+    .matrix-container{
+        margin-top: 0;
+        height: 35vh;
+    }
+    #skills-title{
+        margin:0 0;
+        top: 4vh;
+    }
+    #technologies{
+        margin-top: 13vh;
     }
 
 .navigation-bar{
@@ -1039,8 +1069,13 @@ width: 5%;
     transition: all 0.2s ease-out;
     box-shadow: 0px 0px 19px 1px rgb(93 173 226 / 70%);
     transform: none;
+    background-color: rgb(41 41 41 / 70%);
     
 
+  }
+
+  .alien{
+      width: 100%;
   }
 
 .top-hero{
@@ -1048,19 +1083,32 @@ width: 5%;
     transform: none;
 
 }
+#works-title{
+    margin-bottom: 0vh;
+    margin-top: 6vh;
+}
 
-
-
-
+#second-presentation-child{
+    padding-left: 0rem;
+}
 .active {
     border: 1px solid var(--secondary-color);
     box-shadow: 0px 0px 19px 1px rgb(248 47 251 / 70%);
     transform: translateY(-19px);
 }
 
+.about-me{
+    height: unset;
+    margin-bottom: 10rem;
+}
 
+.about-text h1{
+    width: 70%;
+}
 
-
+#mjspic{
+    width: 100%;
+}
 }/* Media Query's closing qurly brace */
 @media screen and (min-width: 1000px){
     .f-blink{
