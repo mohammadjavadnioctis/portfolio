@@ -202,7 +202,7 @@ c.style.display = 'none'
 
 ScrollTrigger.create({
   trigger:'.monitor',
-  start: 'center center',
+  start: 'top bottom',
   
   // markers: true,
   
@@ -755,7 +755,11 @@ navigators.forEach(navigator => {
   observer.observe(navigator)
 })
 
-    
+  //hiding thunders on macOS    
+  if(safariAgent){
+  let lines = document.querySelectorAll('.line')
+  lines.forEach(line=>{line.style.display = 'none'})
+  }
   })
 
 

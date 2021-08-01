@@ -170,15 +170,15 @@ h1{
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: flex-end;
+   justify-content: center;
    overflow: hidden;
    box-shadow: 0 101px 54px 24px #292929d9;
    
 }
 .hero{
     position: relative;
-    width: 100%;
-    height: 90vh;
+    width: 63%;
+    height: 100vh;
     /* border-top: 2px solid aqua; */
     
     display: flex;
@@ -986,7 +986,15 @@ width: 5%;
 
 
   @media screen and (max-width: 600px) {
-    
+    .line{
+        display: none;
+    }
+    .secline{
+        display: none;
+    }
+    #techHoriThunderLeftId, #techHoriThunderId, #react-bottom-thudner-id{
+        display: unset !important;
+    }
     h1{
         /* text-shadow: none; */
         font-size: 2em !important;
@@ -1008,6 +1016,7 @@ width: 5%;
     }
     #powerUnit{
         margin: 0 0;
+        height: 25vh;
     }
     #powerUnit{
         margin-top: 0;
